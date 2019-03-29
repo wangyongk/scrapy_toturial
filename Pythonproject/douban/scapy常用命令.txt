@@ -1,0 +1,48 @@
+1，新建一个工程
+
+scrapy startproject spider_name
+
+2，查看当前项目内有多少爬虫
+
+scrapy list
+
+3，view使用浏览器打开网页
+
+scrapy view http://www.baidu.com
+
+4，startproject
+
+语法: scrapy startproject <project_name>
+
+这个命令是scrapy最为常用的命令之一，它将会在当前目录下创建一个名为 <project_name>的项目。
+
+5，runspider
+
+语法: scrapy runspider <spider_file.py>
+
+在未创建项目的情况下，运行一个编写在Python文件中的spider。
+
+6，fetch
+
+语法: scrapy fetch <url>
+
+使用Scrapy下载器(downloader)下载给定的URL，并将获取到的内容送到标准输出。简单的来说，就是打印url的html代码。
+
+7，version
+
+语法: scrapy version [-v]
+
+输出Scrapy版本。配合 -v 运行时，该命令同时输出Python, Twisted以及平台的信息。
+
+8，crawl
+
+语法: scrapy crawl <spider_name>
+
+使用你项目中的spider进行爬取，即启动你的项目。这个命令将会经常用到，我们会在后面的内容中经常使用。
+
+9，genspider
+
+语法: scrapy genspider [-t template] <name> <domain>
+
+在当前项目中创建spider。该方法可以使用提前定义好的模板来生成spider。您也可以自己创建spider的源码文件。
+例如： scrapy genspider -t basic wa(py 的名字) baidu.com
